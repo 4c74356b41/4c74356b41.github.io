@@ -1,0 +1,8 @@
+Sitemap: http://4c74356b41.com/sitemap.xml
+User-Agent: *
+Allow: /$
+Allow: /about
+Allow: /post*
+Allow: /sitemap.xml
+Allow: /*.css
+Disallow: /*
