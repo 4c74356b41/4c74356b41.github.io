@@ -13,6 +13,8 @@ categories:
 I've came across this problem where I had a backup vault I want to delete, but it contains Azure SQL long term backup databases.
 And you cannot remove them using the portal. Azure Backup is pretty counter-intuitive so I've decided to convert that knowledge into a post.
 
+**Obviously you will lose all your backups if you do this**. But since I was just tinkering around I needed to do that.
+
 What you have to do is remove the backup items and delete the vault after.
 
 ```
