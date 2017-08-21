@@ -1,6 +1,6 @@
 ---
 id: 5774
-title: How to deploy classic resource (some) using ARM Templates
+title: How to deploy classic resources (some) using ARM Templates
 date: 2017-08-04T11:40:00+00:00
 author: rootilo
 layout: post
