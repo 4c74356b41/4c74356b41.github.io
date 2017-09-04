@@ -28,7 +28,6 @@ All the samples I've been able to locate:
 https://github.com/chagarw/MDPP/tree/master/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)
 https://github.com/mspnp/reference-architectures/tree/master/sharepoint/sharepoint-2016 < sql2016-ws2016 (I didn't test, but will definitely fail with sql2016sp1)
 https://github.com/robotechredmond/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)
- < SQL2014SP2-WS2012R2 (works, but outdated)
 
 The below is the first error you will run into when trying to deploy most of the examples above :), you will encounter many other errors after fixing this one ;).
 ```
