@@ -25,8 +25,8 @@ xSqlServer module is the thing I've been using, but there are many issues with i
 
 All the samples I've been able to locate:
 
-https://github.com/chagarw/MDPP/tree/master/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)
-https://github.com/mspnp/reference-architectures/tree/master/sharepoint/sharepoint-2016 < sql2016-ws2016 (I didn't test, but will definitely fail with sql2016sp1)
+https://github.com/chagarw/MDPP/tree/master/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)  
+https://github.com/mspnp/reference-architectures/tree/master/sharepoint/sharepoint-2016 < sql2016-ws2016 (I didn't test, but will definitely fail with sql2016sp1)  
 https://github.com/robotechredmond/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)
 
 The below is the first error you will run into when trying to deploy most of the examples above :), you will encounter many other errors after fixing this one ;).
@@ -48,5 +48,5 @@ VERBOSE: [2017-09-01 07:54:15Z] [ERROR] The input object cannot be bound to any 
  Links:
 
  1. [DSC modules](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/tree/master/artifacts/configurationscripts)
- 2. [ARM Template(s) reference that deploys those](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/application/azuredeploy.json)
+ 2. [ARM Template(s) reference that deploys those](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/application/azuredeploy.json). Note: Arm template that deploys sql needs to have vnet and domain already in place.. You will get a hard time trying to deploy this outside of that framework, so probably just copy out dsc extension\dsc scripts and use in your deployments.
  3. [Parameters file example](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/azuredeploy.parameters.json)
