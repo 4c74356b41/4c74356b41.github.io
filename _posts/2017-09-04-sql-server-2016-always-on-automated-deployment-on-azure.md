@@ -23,13 +23,13 @@ Changes made:
 
 xSqlServer module is the thing I've been using, but there are many issues with it, unfortunately. I've had to manually modify at least one place with a fix to make this work, I didn't have to investingate the issue because its documented in issues on the github, still it doesnt work without the workaround ;). I've had a few back and forths with the [module maintainer on twitter](https://twitter.com/johanljunggren) to get some basic idea about different things (I'm not really a sql guy).
 
-All the samples I've been able to locate:
+**SQL2016SP1-WS2016** and do not work:
+https://github.com/chagarw/MDPP/tree/master/301-sql-alwayson-md  
+https://github.com/robotechredmond/301-sql-alwayson-md  
+**SQL2016-WS2012** does work, but won't with **SQL2016SP1-WS2016**:
+https://github.com/mspnp/reference-architectures/tree/master/sharepoint/sharepoint-2016
 
-https://github.com/chagarw/MDPP/tree/master/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)  
-https://github.com/mspnp/reference-architectures/tree/master/sharepoint/sharepoint-2016 < sql2016-ws2016 (I didn't test, but will definitely fail with sql2016sp1)  
-https://github.com/robotechredmond/301-sql-alwayson-md < SQL2016SP1-WS2016 (doesn't work)
-
-The below is the first error you will run into when trying to deploy most of the examples above :), you will encounter many other errors after fixing this one ;).
+The below is the first error you will run into when trying to deploy 2016\2016 examples above :), you will encounter many other errors after fixing this one ;).
 ```
 [[xSqlEndpoint]SqlAlwaysOnEndpoint] Creating database mirroring endpoint for SQL AlwaysOn ...
 VERBOSE: [2017-09-01 07:53:32Z] [ERROR] The input object cannot be bound to any parameters for the command either because the command does not take pipeline input or the input and its properties do not match any of the parameters that take pipeline input.
@@ -50,3 +50,4 @@ VERBOSE: [2017-09-01 07:54:15Z] [ERROR] The input object cannot be bound to any 
  1. [DSC modules](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/tree/master/artifacts/configurationscripts)
  2. [ARM Template(s) reference that deploys those](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/application/azuredeploy.json). Note: Arm template that deploys sql needs to have vnet and domain already in place.. You will get a hard time trying to deploy this outside of that framework, so probably just copy out dsc extension\dsc scripts and use in your deployments.
  3. [Parameters file example](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/azuredeploy.parameters.json)
+ 
