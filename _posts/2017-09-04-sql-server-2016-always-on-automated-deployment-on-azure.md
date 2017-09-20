@@ -49,4 +49,7 @@ Links:
 1. [DSC modules](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/tree/master/artifacts/configurationscripts)
 2. [ARM Template](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/application/azuredeploy.json). Note: Arm template that deploys sql needs to have vnet and domain already in place. Also, you will get a hard time trying to deploy this template outside of that framework, so probably just copy out dsc extension\dsc scripts and use in your deployments.
 3. [Parameters file example](https://github.com/AvyanConsultingCorp/PCI_Reference_Architecture/blob/master/templates/resources/azuredeploy.parameters.json)
+
+Update:  
+I switched to using `Microsoft.SqlServer.Management\SqlIaaSAgent` extension and that does allow me to get rid of all the xSql stuff and retain functionality. So right now I'm using only xSqlServer, which is really nice, as it appears to work in a more consistent fashion.
  
