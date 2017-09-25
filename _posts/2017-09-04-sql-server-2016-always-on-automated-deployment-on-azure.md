@@ -53,3 +53,6 @@ Links:
 Update:  
 I switched to using `Microsoft.SqlServer.Management\SqlIaaSAgent` extension and that does allow me to get rid of all the xSql stuff and retain functionality. So right now I'm using only xSqlServer, which is really nice, as it appears to work in a more consistent fashion.
  
+ Another Update:  
+ Turns out the `SqlIaaSAgent` is setting SQL Server Service account to a local one and AlwaysOn requires domain service accounts (or certificate auth), so I had to add additional steps to fix SPN's and change service account to domain one.
+ 
