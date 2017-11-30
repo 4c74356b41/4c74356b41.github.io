@@ -15,7 +15,7 @@ Howdy,
 
 I needed a function to quickly compare similar resources across environments (stage\prod) in Azure, so I came up with a couple of functions to do this.
 
-```
+```powershell
 Function Compare-ObjectProperties {
     Param(
         [PSObject]$refObject,
@@ -76,7 +76,7 @@ Function Compare-AzureObjects {
 Usage:
 
 1. Import both functinos into your session
-2. Call the 'meta' functions like so: `Compare-AzureObjects $firstObject $secondObject`
+2. Call the 'meta' function like so: `Compare-AzureObjects $firstObject $secondObject`
 3. Look at the output on the screen, in the log.txt and error.txt (should you have any) in the current working directory
 
 Enjoy.
