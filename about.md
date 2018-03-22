@@ -15,3 +15,10 @@ The opinions expressed here are my own and do not represent Microsoft or anybody
 You can contact me via [twitter](https://twitter.com/4c74356b41) or email <hr@4c74356b41.com>.
 
 ===============================================
+
+Easy way to say thanks :)
+
+btc: 39vYZ3TEjg8A2dMgC7KbPmaD7DvaW2ctku  
+eth: 0x6a283e80D4e9B7E471532375ed652594595A5a6b
+
+===============================================
