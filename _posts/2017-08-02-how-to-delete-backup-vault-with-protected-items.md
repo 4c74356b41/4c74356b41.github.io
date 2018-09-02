@@ -23,10 +23,14 @@ $vault = Get-AzureRmRecoveryServicesVault -Name '{VaultName}'
 Set-AzureRmRecoveryServicesVaultContext -Vault $vault
 # Get protection containers to work with those
 $containers = Get-AzureRmRecoveryServicesBackupContainer -ContainerType AzureSQL -Status Registered
+$item = Get-AzureRmRecoveryServicesBackupItem -Container $containers -WorkloadType AzureSQLDatabase
+$availableBackups = Get-AzureRmRecoveryServicesBackupRecoveryPoint -Item $item
+$availableBackups # check existing items
 foreach ($container in $containers) {
-    $item = Get-AzureRmRecoveryServicesBackupItem -Container $container -WorkloadType AzureSQLDatabase
-    # possibly need another iterator here
-    Disable-AzureRmRecoveryServicesBackupProtection -Item $item -RemoveRecoveryPoints
+    $items = Get-AzureRmRecoveryServicesBackupItem -container $container -WorkloadType AzureSQLDatabase
+    ForEach ($item in $items) {
+        Disable-AzureRmRecoveryServicesBackupProtection -item $item -RemoveRecoveryPoints -ea SilentlyContinue
+    }
     Unregister-AzureRmRecoveryServicesBackupContainer -Container $container
 }
 ```
