@@ -7,7 +7,7 @@ layout: post
 guid: http://4c74356b41.com/post5780
 permalink: /post5780
 categories:
-  - stackoverflow 
+  - stackoverflow
 ---
 
 Howdy,
