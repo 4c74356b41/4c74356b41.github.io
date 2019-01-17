@@ -14,7 +14,7 @@ categories:
 
 Howdy,
 
-I needed to create ACR along with AKS and grant AKS access to pull ACR images with a template. This isn't particularly tricky, the only caveat is that you have to give it service principal objectId, not applicationId of your AKS application. Template cannot find that out - so you need to calculate that outside of the template
+I needed to create ACR along with AKS and grant AKS access to pull ACR images with a template. This isn't particularly tricky, the only caveat is that you have to give it service principal objectId, not applicationId of your AKS application. Template cannot find that out - so you need to calculate that outside of the template.
 
 ```
 {

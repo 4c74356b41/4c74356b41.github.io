@@ -1,0 +1,19 @@
+---
+id: {{ id }}
+title: {{ title }}
+date: {{ date }}
+author: rootilo
+layout: post
+guid: http://4c74356b41.com/post{{ id }}
+permalink: /post{{ id }}
+categories:
+{% for item in tags -%}
+  - {{ item }}
+{% endfor %}
+---
+
+Howdy,
+
+
+
+Happy deploying!
