@@ -1,7 +1,7 @@
 ---
 id: 5781
 title: Start\stop Azure resources based on tags
-date: 2019-01-06T19:10:00+00:00
+date: 2019-01-13T19:10:00+00:00
 author: rootilo
 layout: post
 guid: http://4c74356b41.com/post5781
