@@ -1,6 +1,6 @@
 ---
 id: 5784
-title: Iterate over array with objects that do not have identical properties
+title: Iterate over array with objects that do not have identical properties inside ARM Templates
 date: 2019-01-20
 author: rootilo
 layout: post
@@ -30,13 +30,13 @@ I needed to come up with a solution on how to iterate an array where objects hav
                 {
                     "name": "GatewaySubnet",
                     "addressPrefix": "10.2.0.0/24",
-                    "networkSecurityGroup": "NSG-AllowAll", // these have to be different only because I'm creating them in the same template, if they were external you can have them identical
+                    "networkSecurityGroup": "NSG-AllowAll", // these have to be different only because I'm creating them in the same template, these can be identical
                     "routeTable": "UDR-Default"
                 },
                 {
                     "name": "UnTrusted",
                     "addressPrefix": "10.2.1.0/24",
-                    "networkSecurityGroup": "NSG-AllowAll1" // these have to be different only because I'm creating them in the same template, if they were external you can have them identical
+                    "networkSecurityGroup": "NSG-AllowAll1" // these have to be different only because I'm creating them in the same template, these can be identical
                 },
                 {
                     "name": "routed",
@@ -138,6 +138,9 @@ I needed to come up with a solution on how to iterate an array where objects hav
 }
 ```
 
-What happens here is we assemble all the needed objects (together with unneeded) and then we discard unneeded objects using `if()` and `union()` functions.
+What happens here is we assemble all the needed objects (together with unneeded) and then we discard unneeded objects using `if()` and `union()` functions. More context:
+
+1. https://stackoverflow.com/questions/54291778/how-to-use-jagged-objects-in-azure-resource-manger-templates-to-iterate-over-t/54292381#54292381
+2. https://stackoverflow.com/questions/54277322/iterate-over-not-existing-azure-resource-manager-arm-object-properties/54278741#54278741
 
 Happy deploying!
