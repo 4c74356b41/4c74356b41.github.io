@@ -32,6 +32,8 @@ group by u.id,
 order by totscore desc
 ```
 
-ps. [SO database schema](https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede).
+
+ps. [Queries URL](https://data.stackexchange.com/stackoverflow/query/new).
+pps. [SO database schema](https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede).
 
 Happy deploying!
