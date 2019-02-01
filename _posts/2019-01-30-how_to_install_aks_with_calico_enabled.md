@@ -35,7 +35,10 @@ after that, just use REST API\ARM Template to create the cluster (relevant piece
         "name": "nodepool1",
         "count": 3,
         "vmSize": "Standard_DS1_v2",
-        "osType": "Linux"
+        "osType": "Linux",
+        "osDiskSizeGB": 32,
+        "maxPods": 110,
+        "vnetSubnetID": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'vnetname', 'subnetname')]" // vnet to use for aks nodes
       }
     ],
     "linuxProfile": {
@@ -56,15 +59,15 @@ after that, just use REST API\ARM Template to create the cluster (relevant piece
     "networkProfile": {
         "networkPlugin": "azure",
         "networkPolicy": "calico", // set policy here
-        "serviceCidr": "xxx",
-        "dnsServiceIP": "yyy",
-        "dockerBridgeCidr": "zzz"
+        "serviceCidr": "xxx", // IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+        "dnsServiceIP": "yyy", // IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+        "dockerBridgeCidr": "zzz" // IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
     }
   }
 }
 ```
 
-Unfortunately, helm doesnt seem to work (I suspect this is because `kubectl port-forward` which helm relies on doesnt work as well ).
+Unfortunately, helm doesnt seem to work. I suspect this is because `kubectl port-forward` (which helm relies on) doesnt work as well.
 
 More reading:  
 1. https://github.com/Azure/AKS/blob/master/previews.md
