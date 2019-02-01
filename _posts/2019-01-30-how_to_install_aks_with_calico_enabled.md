@@ -1,11 +1,11 @@
 ---
-id: 5787
+id: 5788
 title: How to install AKS with Calico enabled
 date: 2019-01-30
 author: rootilo
 layout: post
-guid: http://4c74356b41.com/post5787
-permalink: /post5787
+guid: http://4c74356b41.com/post5788
+permalink: /post5788
 categories:
 - Azure
 - Kubernetes
