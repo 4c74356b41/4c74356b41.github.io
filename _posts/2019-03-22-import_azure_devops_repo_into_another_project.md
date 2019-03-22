@@ -15,7 +15,7 @@ Howdy,
 
 I needed to "migrate" a bunch of repos from different projects to a new unified project, so I came up with this script. it has some assumptions, like repo name matches project name, same user\token can access both organizations so on so fourth, but you can easily customize it to your needs. Also, if you want to import public github repo, you can just skip the endpoint creation part and slightly edit the json you send to the importRequests endpoint (i didnt find any docs on this, sadly). you just need to pass in `null` to the `serviceEndpointId`.
 
-```
+```powershell
 function Import-AzureDevopsRepository {
     [CmdletBinding()]
     Param(
