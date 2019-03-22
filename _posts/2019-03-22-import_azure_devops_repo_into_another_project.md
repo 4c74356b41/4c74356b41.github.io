@@ -7,8 +7,6 @@ layout: post
 guid: http://4c74356b41.com/post5791
 permalink: /post5791
 categories:
-- Azure
-- Devops
 - Powershell
 
 ---
