@@ -20,12 +20,12 @@ here's all you need to configure Azure DNS for Cert-Manager. This would also hel
 Make Cert-Manager happy with CAA records on your domain:
 ```
 $caaRecords = New-Object System.Collections.ArrayList
-$caaRecords.Add(New-AzureRmDnsRecordConfig -CaaFlag "0" -CaaTag "iodef" -CaaValue "mailto:admin@example.com")
-$caaRecords.Add(New-AzureRmDnsRecordConfig -CaaFlag "0" -CaaTag "issue" -CaaValue "letsencrypt.org")
+$caaRecords.Add((New-azDnsRecordConfig -CaaFlag "0" -CaaTag "iodef" -CaaValue "mailto:admin@example.com"))
+$caaRecords.Add((New-azDnsRecordConfig -CaaFlag "0" -CaaTag "issue" -CaaValue "letsencrypt.org"))
 #for wildcard uncomment next line
-#$caaRecords.Add(New-AzureRmDnsRecordConfig -CaaFlag "0" -CaaTag "issuewild" -CaaValue "letsencrypt.org")
+#$caaRecords.Add((New-azDnsRecordConfig -CaaFlag "0" -CaaTag "issuewild" -CaaValue "letsencrypt.org"))
 
-New-AzureRmDnsRecordSet -Name "@" -RecordType CAA -ZoneName zone.com -ResourceGroupName rgName -Ttl 3600 -DnsRecords $caaRecords
+New-AzDnsRecordSet -Name "@" -RecordType CAA -ZoneName zone.com -ResourceGroupName rgName -Ttl 3600 -DnsRecords $caaRecords
 ```
 
 Least priviledge role in Azure to manage TXT records:
