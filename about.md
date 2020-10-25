@@ -18,7 +18,7 @@ You can contact me via [twitter](https://twitter.com/4c74356b41) or email <hr
 
 Easy way to say thanks :)
 
-btc: 36BjbK3BPujeTMsSXidrASNEFiqdR175NB 
+btc: 36BjbK3BPujeTMsSXidrASNEFiqdR175NB  
 paypal: [paypal.me](https://paypal.me/4c74356b41)
 
 ===============================================
